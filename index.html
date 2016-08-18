@@ -37,13 +37,13 @@
 
 <p>I started off doing "print shop design", where I learned the ins and outs of graphic design, branding, and selling my ideas to clients. I moved into print advertising where I collaborated with sales reps to create newspaper and magazine ads. Next came digital advertising, where I used my design skills to create animated ads and landing pages. I learned about usability and affordance, and how to guide a user through a landing page or form with minimal effort and errors.  </p>
 
-<p>After some time I noticed that the code I was writing should be organized in a way that makes it reusable from ad to ad. That aha moment was when I began to understand what being a software developer is and began my self-guided journey through ActionScript, to Flex, and to JavaScript.</p>
+<p>After some time writing bits of code for Flash ads and landing pages I noticed that the code I was writing could be organized in a way that makes it reusable from ad to ad. That aha moment was when I began to understand what being a software developer is and began my self-guided journey through ActionScript, to Flex, and to JavaScript.</p>
 
-<p>But I kept going, learning new JavaScript frameworks, nodejs, software design patterns, antipatterns, some python, and eventually dipped my toes into C (Oh C, you've taught me so much).  </p>
+<p>But I kept going, learning new JavaScript frameworks, software design patterns, antipatterns, some python, linux, and eventually dipped my toes into C (Oh C, you've taught me so much) and Go.</p>
 
 <p>And that's where I am now. I am a designer: I care about balance, color, the user, usability, workflow. I am a developer: I care about encapsulation, sensible abstractions, readable code.  </p>
 
-<p>I've learned everything I know so far by my own initiative, and refined my skills by working with excellent designers and developers. Now my sights are aimed at VR and AR. The future lies in VR and AR entertainment, experiences, and educational tools, and that's where I want to be.</p>
+<p>I've learned everything I know so far by my own initiative, and refined my skills by working with excellent designers and developers. Learning a new language or framework or tool is the easy part; I just need someone to point at me at a project and say go. But now my sights are aimed at VR and AR. The future lies in VR and AR entertainment, experiences, and educational tools, and that's where I plan to be. The wild west of VR UI is a-callin' me. Be the lucky company that picks me up :D</p>
                 </div>
             </div>
         </div>
@@ -131,6 +131,74 @@
 <li><a href="https://github.com/rDr4g0n/EasyPeasyBrownieOven">Brownie Oven source on GitHub</a></li>
 
 <li><a href="https://rdr4g0n.github.io/EasyPeasyBrownieOven/">Brownie Oven demo</a></li>
+</ul>
+                </div>
+            </div>
+        </div>
+    
+        <div id="phoxlights" class="portfolio-item">
+            <div class="portfolio-content">
+                <div class="item-header">
+                    <h1 class="item-title">Phoxlights</h1>
+                    <div class="item-created">
+                        Created<br>September 2015
+                    </div>
+                </div>
+                <div class="item-content">
+                    <p>Phoxlight is a customizable, full color LED bicycle brake light and turn signal. Software by myself and hardware by Julian Containne.</p>
+
+<p><img class="b-lazy" 
+    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    data-src="phoxlight1.jpg"
+    style="width: 800px; height: 381px;"
+    alt="Behold, the Phoxlight"></p>
+
+<p>A ring of 16 RGB LED pixels serves as the taillight and displays right and left turn signal animations, brake light, and running animation. The running animation, colors, and patterns can be customized via web or mobile app.</p>
+
+<p><img class="b-lazy" 
+    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    data-src="phoxlight2.jpg"
+    style="width: 800px; height: 454px;"
+    alt="Behold, the Medusa"></p>
+
+<p>The original Phoxlight, we fondly call "the medusa", was a tangled mess of wires connecting turn signal lights, switch, brake sensor, taillight and the Arduino microcontroller. Then along came the esp8266, a SOC with a much better processor, more RAM, and integrated WiFi. This presented the opportunity to WiFi all the things. Instead of running wires everywhere, each component connects to the taillight-hosted WiFi network.</p>
+
+<p><img class="b-lazy" 
+    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    data-src="phoxlight1.gif"
+    style="width: 462px; height: 320px;"
+    alt="Here we go, just right"></p>
+
+<p>The software architecture embraces this extendability, making it easy-peasy to design new components (think brake sensors, spoke lights, fork lights, or non-bike things like wifi-enabled jewelry, skate lighting, band costumes), and connect those components to one another. It's primarily written in C, but uses an Arduino C++ layer to abstract much of the hardware interaction. The animation library allows keyframed animations of bitmaps, with the ability to apply arbitrary "transformations" to the bitmap.</p>
+
+<p>The original medusa Phoxlight code is available on github, but is very much out of date. The new esp8266-driven Phoxlight platform code is not yet available, but will be once we hit v1.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li>16 LED RGB light ring taillight</li>
+
+<li>Turn signal switch component</li>
+
+<li>Brake sensor component</li>
+
+<li>Buy new components at any time and sync them with your taillight</li>
+
+<li>Mobile app allows configuration of components</li>
+
+<li>Phoxlight platform makes it easy to wire pieces together to create new components</li>
+
+<li>Phoxlight animation library provides keyframed bitmap animation with arbitrary "transforms"</li>
+
+<li>OTA upgradable firmware</li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li><a href="https://www.facebook.com/phoxlights">Phoxlights Facebook</a></li>
+
+<li><a href="https://github.com/rDr4g0n/PhoxLight">Phoxlights source on GitHub (this is the OLD code)</a></li>
 </ul>
                 </div>
             </div>
@@ -569,7 +637,7 @@
 
             <nav class="main-nav">
                 
-        <a href="#intro" class="nav-item rando-3">
+        <a href="#intro" class="nav-item rando-1">
             <div class="item-title">Hi, I'm John!</div>
         </a>
     
@@ -577,19 +645,23 @@
             <div class="item-title">QuickVis</div>
         </a>
     
-        <a href="#brownietown" class="nav-item rando-3">
+        <a href="#brownietown" class="nav-item rando-2">
             <div class="item-title">Brownie Oven</div>
         </a>
     
-        <a href="#sfninja" class="nav-item rando-1">
+        <a href="#phoxlights" class="nav-item rando-3">
+            <div class="item-title">Phoxlights</div>
+        </a>
+    
+        <a href="#sfninja" class="nav-item rando-3">
             <div class="item-title">SFNinja</div>
         </a>
     
-        <a href="#iomaker" class="nav-item rando-0">
+        <a href="#iomaker" class="nav-item rando-1">
             <div class="item-title">IOMaker</div>
         </a>
     
-        <a href="#framefighter" class="nav-item rando-0">
+        <a href="#framefighter" class="nav-item rando-2">
             <div class="item-title">FrameFighter</div>
         </a>
     
@@ -597,19 +669,19 @@
             <div class="item-title">SpriteStudio</div>
         </a>
     
-        <a href="#menumouth" class="nav-item rando-3">
+        <a href="#menumouth" class="nav-item rando-2">
             <div class="item-title">MenuMouth.com</div>
         </a>
     
-        <a href="#motiondesign" class="nav-item rando-0">
+        <a href="#motiondesign" class="nav-item rando-1">
             <div class="item-title">Motion Design</div>
         </a>
     
-        <a href="#design" class="nav-item rando-3">
+        <a href="#design" class="nav-item rando-2">
             <div class="item-title">Design</div>
         </a>
     
-        <a href="#art" class="nav-item rando-2">
+        <a href="#art" class="nav-item rando-1">
             <div class="item-title">Art</div>
         </a>
      
