@@ -118,9 +118,11 @@
 
       }, {
           key: "select",
-          value: function select() {
+          value: function select(skipBaffle) {
               if (!this.selected) {
-                  this.baffleTitle();
+                  if (!skipBaffle) {
+                      this.baffleTitle();
+                  }
                   this.selected = true;
                   this.navEl.classList.add("selected");
                   this.navEl.style.width = this.navElExpandedWidth;
@@ -156,13 +158,16 @@
   var lastScrollPos = getScrollTop();
   var scrollSensitivity = 70;
   var offsetPadding = 65;
-  var navItemEls = document.querySelectorAll(".nav-item");
+  var width = window.outerWidth;
+  var MOBILE_BREAKPOINT = 500;
+
   var App = function () {
       function App() {
           var _this = this;
 
           classCallCheck(this, App);
 
+          var navItemEls = document.querySelectorAll(".nav-item");
           this.items = Array.prototype.map.call(navItemEls, function (el) {
               return new PortfolioItem(el);
           });
@@ -172,14 +177,21 @@
               _this.refreshNavSelection();
           });
 
+          // TODO - debounce
           // on resize, recalculate offsets
           window.addEventListener("resize", function (e) {
-              // TODO - debounce
               _this.refreshNavSelection();
+              // cache window width
+              width = window.outerWidth;
           });
 
           // as the page scrolls, select the appropriate nav el
           window.addEventListener("scroll", function (e) {
+              // dont bother updating nav if this is mobile-sized
+              if (_this.isMobile()) {
+                  return;
+              }
+
               if (Math.abs(getScrollTop() - lastScrollPos) > scrollSensitivity) {
                   _this.selectMostVisibleItem();
               }
@@ -220,7 +232,16 @@
           this.refreshNavSelection();
       }
 
+      // if this is mobile-device-sized, nav gets hidden
+      // so dont bother with all the expensive nav update stuff
+
+
       createClass(App, [{
+          key: "isMobile",
+          value: function isMobile() {
+              return width <= MOBILE_BREAKPOINT;
+          }
+      }, {
           key: "getPortfolioItemForNavEl",
           value: function getPortfolioItemForNavEl(el) {
               for (var i = 0; i < this.items.length; i++) {
@@ -232,9 +253,13 @@
       }, {
           key: "selectPortfolioItem",
           value: function selectPortfolioItem(portfolioItem) {
+              var _this2 = this;
+
               this.items.forEach(function (item) {
                   if (item === portfolioItem) {
-                      item.select();
+                      // select, but dont animate if 
+                      // mobile-sized
+                      item.select(_this2.isMobile() ? true : false);
                   } else {
                       item.deselect();
                   }
@@ -292,6 +317,11 @@
       }, {
           key: "refreshNavSelection",
           value: function refreshNavSelection() {
+              // dont even
+              if (this.isMobile()) {
+                  return;
+              }
+
               // update offsets cache
               this.updatePortfolioItemOffsets();
               // make sure the right nav el is selected after
