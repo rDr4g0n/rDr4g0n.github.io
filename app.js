@@ -288,7 +288,8 @@
 
               // if near the end, select the last item
               if (bodyEl.scrollHeight - lastScrollPos - bodyEl.clientHeight < scrollSensitivity) {
-                  return this.items[this.items.length - 1];
+                  //return this.items[this.items.length-1];
+                  return;
               }
 
               // otherwise, figure out which item is nearest top

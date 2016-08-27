@@ -184,10 +184,12 @@ a:hover {
     100% { top: -0px; left: 1px; }
 }
 
+.main-footer .contact,
 .main-header .contact {
     margin: 10px -10px;
 }
 
+.main-footer .contact a,
 .main-header .contact a {
     display: inline-block;
     background-color: #24BBCC;
@@ -204,15 +206,44 @@ a:hover {
     margin-right: 0px;
 }
 
+.main-footer .contact .fa,
 .main-header .contact .fa {
     padding-right: 6px;
     color: #FFE52D;
 }
+.main-footer .contact a:hover .fa,
 .main-header .contact a:hover .fa {
     color: white;
 }
 
 .content {
+}
+
+.main-footer {
+    width: 100%;
+    background-color: #FFE52D;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+.main-footer .contact {
+    margin: 0;
+    background-color: transparent;
+}
+.main-footer .contact a,
+.main-footer .contact a:hover {
+    padding: 2px 4px;
+}
+.main-footer .contact a:hover {
+    background-color: #FF1493;
+    text-decoration: none;
+}
+
+.main-footer .my-name {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold;
+    font-size: 7em;
+    letter-spacing: -6px;
+    color: white;
 }
 
 
@@ -224,6 +255,10 @@ a:hover {
     .main-header {
         font-size: 1em !important;
     }
+    .main-footer .my-name {
+        font-size: 3em !important;
+        letter-spacing: -3px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -233,16 +268,40 @@ a:hover {
         height: auto;
         max-height: none;
         margin-top: 10px;
+        height: 90vh;
     }
     .main-header .name {
         font-size: 3.5em;
         letter-spacing: -2px;
+        z-index: 1;
+    }
+    .main-header .contact {
+        /* i feel terrible about this */
+        z-index: 2;
+        display: flex;
+    }
+    .main-header .contact br {
+        /* i feel terrible about this too */
+        display: none;
     }
     .main-header .contact a {
+        display: inline;
         transform: none !important;
         width: 100%;
         padding: 2px 10px;
-        background-color: #FF1493;
+    }
+    .main-header .contact .fa {
+        padding-right: 0;
+    }
+    .main-header .contact a:hover {
+        padding-left: 10px;
+        margin-right: 5px;
+    }
+    .main-header .contact a .title {
+        display: none;
+    }
+    .main-footer .my-name {
+        font-size: 5em;
     }
     body {
         background-image: url("fist1.png"), url("noise1.png"), url("noise2.png");
