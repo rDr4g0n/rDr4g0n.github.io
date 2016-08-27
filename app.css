@@ -391,3 +391,9 @@ a:hover {
         display: none;
     }
 }
+
+@media (max-height: 450px) {
+    .main-nav .nav-item {
+        margin: 2px 4px;
+    }
+}
