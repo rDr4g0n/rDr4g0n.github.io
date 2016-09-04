@@ -386,6 +386,13 @@ a:hover {
 }
 
 
+@media (max-width: 700px) {
+
+    .main-nav .nav-item {
+        transition: none;
+    }
+}
+
 @media (max-width: 500px) {
     .main-nav {
         display: none;
