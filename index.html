@@ -45,7 +45,7 @@
                 </a>
             </div>
             <div class="intro-blurb">
-                Hey! I am a senior UI developer with 8+ years of experience surviving (and thriving in) the wild west of web UI. I like to plan, build (or help others build), learn, and improve. I also make pretty good pourover coffee!
+                Hey! I am a Principal Frontend Engineer and Architect with 13+ years of experience surviving (and thriving in) the wild west of web front end. I love working with product, design, and end users to figure out exactly what is needed, plan it, build it, get it out there, measure, learn and improve. I'm also passionate about providing a great developer experience along the way, ensuring devs follow best practices by making them easy to follow!
             </div>
         </div>
         <div class="content">
@@ -75,7 +75,7 @@
                     <div class="thing-i-bring">
                         <div class="thing-i-bring-art"><img src="initiative-art.png"></div>
                         <h2 class="thing-i-bring-title">Initiative and Ownership</h2>
-                        <p class="thing-i-bring-blurb">Passion for quality UI, drives me to identify problems and own the solution.</p>
+                        <p class="thing-i-bring-blurb">Passion for quality UI drives me to identify problems and own the solution.</p>
                     </div>
                     <div class="thing-i-bring">
                         <div class="thing-i-bring-art"><img src="crossteam-art.png"></div>
@@ -85,23 +85,22 @@
                 </div>
             </section>
             <section class="some-skills-section">
-                <h1 class="baffling">These are some of my skills</h1>
+                <h1 class="baffling">These are *some* of my skills</h1>
                 <div class="some-skills">
                     <div class="some-skills-column">
                         <div class="some-skills-block">
                             <h2 class="some-skills-block-title">Technical</h2>
                             <ul class="some-skills-block-list">
-                                <li>Modern JavaScript features: arrows, async/await, promises, destructuring, import/export</li>
-                                <li>CSS, Sass, Stylus</li>
-                                <li>Web Brower APIs (DOM and friends)</li>
-                                <li>Browser dev tools, profiling</li>
+                                <li>Modern JavaScript, CSS (and preprocessors), and boring ol HTML</li>
+                                <li>Web Browser APIs, dev tools, and perf profiling</li>
                                 <li>Component-based, state-driven, declarative UI frameworks (vue.js, et al)</li>
                                 <li>Data visualization with SVG and d3</li>
                                 <li>Webpack, babel, eslint</li>
-                                <li>Unit, integration, e2e testing (including BDD)</li>
-                                <li>Interfacing with JSON APIs, graphql</li>
+                                <li>Unit, integration, E2E testing (including BDD)</li>
+                                <li>CI/CD with everyone's good friend Jenkins</li>
+                                <li>Developing middle tier APIs (I love GraphQL)</li>
                                 <li>Linux, vim, make, bash, docker, git</li>
-                                <li>Some C, Python, Go</li>
+                                <li>AWS CloudFront, S3, ECS, ECR, Route53, CloudWatch, and more!</li>
                             </ul>
                         </div>
                     </div>
@@ -113,7 +112,7 @@
                             <h2 class="some-skills-block-title">Visual Design</h2>
                             <ul class="some-skills-block-list">
                                 <li>Graphic design with InDesign, Photoshop, and Illustrator</li>
-                                <li>Animation and interaction design with Flash</li>
+                                <li>Animation and interaction design with Flash [deprecated lol]</li>
                                 <li>General layout and design principles</li>
                             </ul>
                         </div>
@@ -139,28 +138,53 @@
                 <h1 class="baffling">This is my work experience</h1>
                 <div class="experience-block">
                     <div class="experience-block-place">
-                        <div class="experience-block-place-title">Zenoss</div><br>
-                        <div class="experience-block-place-role">Senior Software Engineer</div>
-                        <div class="experience-block-place-time">August 2014 - Current</div>
+                        <div class="experience-block-place-title">Pushnami</div><br>
+                        <div class="experience-block-place-role">Frontend Architect</div>
+                        <div class="experience-block-place-time">May 2021 - Present</div>
                     </div>
                     <ul class="experience-block-experience-list">
-                        <li>Advocated and implemented web application common patterns and best practices</li>
-                        <li>Collaborated with product management, support, and sales engineers to understand user goals and business requirements</li>
-                        <li>Took ownership of stakeholder ideas, refined with wireframes, and implemented them</li>
-                        <li>Deeply embedded with UX consultants in user-centered design process from idea to user testing to visual and interaction design</li>
-                        <li>Translated visual and interaction designs to clean, maintainable, performant, and documented UI code</li>
-                        <li>Architected, planned, and led a team in agile delivery of a new product UI</li>
-                        <li>Researched and selected UI libraries and frameworks and justified decisions for each</li>
-                        <li>CI, automated end to end acceptance tests, and general jenkins headaches</li>
-                        <li>Contributed to non-ui development as needed with go, python, make, docker, and more</li>
-                        <li>Designed and developed a number of one-off UIs, mostly using vanilla js</li>
+                        <li>Established a UI build, release, and bootstrap process, enabling QA to test arbitrary UI versions, and generally making releases more predictable and less scary</li>
+                        <li>Spearheaded a major new UI feature from initial UX research and interviews to UI and API design and through multiple releases and user feedback. The process established here has set the bar for user-centered thinking for all new user-facing features</li>
+                        <li>Introduced GraphQL as a middle tier, established the initial schema, and mentored on GraphQL best practices. A huge win here is that the API is more representative of the user’s mental model, but no changes were needed to the underlying data. I love GraphQL :)</li>
+                        <li>Reduced costs for a massively scaled (and critical!) images api by balancing bytes served at the expense of CPU</li>
+                        <li>Daily involvement with a whole host of AWS services like CloudFront, S3, ECS, ECR, EC2, Route53, Cloudwatch, and many others</li>
+                        <li>Established (and evangelized!) E2E testing strategy</li>
+                    </ul>
+                </div>
+                <div class="experience-block">
+                    <div class="experience-block-place">
+                        <div class="experience-block-place-title">Infoblox</div><br>
+                        <div class="experience-block-place-role">Staff Frontend Engineer,<br>UI Architect</div>
+                        <div class="experience-block-place-time">February 2020 - April 2021</div>
+                    </div>
+                    <ul class="experience-block-experience-list">
+                        <li>Architected, developed, lead a team, and deployed a micro front end loading platform for an existing monolithic UI application. Aside from developing the browser application, this included a large amount of deployment work involving AWS, Jenkins, spinnaker, helm, and Kubernetes.</li>
+                        <li>Defined and developed an incremental migration path from the existing large web application UI to individual micro frontends. This was a huge success as we effectively replaced the foundation of our entire UI without affecting any of the (many) UI developers' day to day!</li>
+                    </ul>
+                </div>
+                <div class="experience-block">
+                    <div class="experience-block-place">
+                        <div class="experience-block-place-title">Zenoss</div><br>
+                        <div class="experience-block-place-role">Senior Software Engineer</div>
+                        <div class="experience-block-place-time">August 2014 - February 2020</div>
+                    </div>
+                    <ul class="experience-block-experience-list">
+                        <li>Architected, planned, and developed the UI platform for the next evolution of Zenoss’s core product: Zenoss Cloud (https://www.zenoss.com/product). This included selection of UI frameworks, libraries, test frameworks, build tools, reusable component library, and broader concerns such as scalability and security.</li>
+                        <li>Scoped, estimated, and planned implementation of UI features, balancing product, user, and technology requirements, ensuring that the resulting features fit neatly within the UI platform</li>
+                        <li>Worked closely with product stakeholders to wireframe and prototype new features and ensure they align well with the broader UI architecture</li>
+                        <li>Worked closely with back end engineers to design (and frequently implemented) GraphQL schemas which properly model the domain and providing maximum flexibility for queries</li>
+                        <li>Mentored fellow engineers (some remote) through white boarding, conversation, and code review, often demonstrating the correct way to “cut with the grain” of a new library</li>
+                        <li>Developed a variety of data visualization components using D3 and SVG</li>
+                        <li>Designed and developed a number of one-off SPAs, with minimal oversight, and occasionally implemented backend services as needed</li>
+                        <li>Served as an expert in web application development tools, libraries, frameworks, and best practices</li>
+                        <li>Brought my passion for user-centered design thinking to just about every conversation, ensuring the end user encounters as little friction as possible</li>
                     </ul>
                 </div>
                 <div class="experience-block">
                     <div class="experience-block-place">
                         <div class="experience-block-place-title">Phoxlights</div><br>
                         <div class="experience-block-place-role">IoT, C Developer</div>
-                        <div class="experience-block-place-time">Ongoing Personal Project</div>
+                        <div class="experience-block-place-time">Personal Project</div>
                     </div>
                     <ul class="experience-block-experience-list">
 						<li>Developed a C lib for layered, keyframed, bitmap animation for use on the esp8266</li>
